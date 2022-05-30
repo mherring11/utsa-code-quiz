@@ -1,7 +1,7 @@
 containerEl = document.querySelector(".opening-container");
 
 var scoreIdCounter = 0;
-var timeLeft = 75;
+var timeLeft = 50;
 var timeInterval;
 
 var scores = [];
@@ -64,17 +64,17 @@ var beginQuiz = function () {
 }
 
 var wrongAnswer = function () {
-    timeLeft = timeLeft - 10;
+    timeLeft = timeLeft - 5;
     questionTwo();
 }
 
 // Second Question
 var questionTwo = function () {
-    questionEl.textContent = "Question #2: The condition in an if/else statement is enclosed with:";
-    answerChoiceOne.textContent = "quotes";
-    answerChoiceTwo.textContent = "parenthesis";
-    answerChoiceThree.textContent = "curly brackets";
-    answerChoiceFour.textContent = "square brackets";
+    questionEl.textContent = "Question #2: What is the use of the blur function:";
+    answerChoiceOne.textContent = "Blur function creates an alert";
+    answerChoiceTwo.textContent = "Blur function is used to remove the focus from the specified object";
+    answerChoiceThree.textContent = "Blur function creates a variable";
+    answerChoiceFour.textContent = "Blur function is used to place focus on an object";
 
     answerChoiceOne.addEventListener("click", questionThree);
     answerChoiceTwo.addEventListener("click", rightAnswerTwo);
@@ -83,21 +83,20 @@ var questionTwo = function () {
 }
 
 var rightAnswerTwo = function () {
-    timeLeft = timeLeft + 10
+    timeLeft = timeLeft + 5
     questionThree();
 }
 var wrongAnswerTwo = function () {
-    timeLeft = timeLeft - 10;
+    timeLeft = timeLeft - 5;
     questionThree();
 }
 
-// Third Question
 var questionThree = function () {
-    questionEl.textContent = "Question #3: Arrays in JavaScript can be used to store:"
-    answerChoiceOne.textContent = "numbers and strings";
-    answerChoiceTwo.textContent = "other arrays";
-    answerChoiceThree.textContent = "booleans";
-    answerChoiceFour.textContent = "all of the above";
+    questionEl.textContent = "Question #3: DOM stands for:"
+    answerChoiceOne.textContent = "document open model";
+    answerChoiceTwo.textContent = "drop on model";
+    answerChoiceThree.textContent = "dynamic object model";
+    answerChoiceFour.textContent = "document object model";
 
     answerChoiceOne.addEventListener("click", questionFour);
     answerChoiceTwo.addEventListener("click", wrongAnswerThree);
@@ -106,21 +105,21 @@ var questionThree = function () {
 }
 
 var rightAnswerThree = function () {
-    timeLeft = timeLeft + 10
+    timeLeft = timeLeft + 5
     questionFour();
 }
 var wrongAnswerThree = function () {
-    timeLeft = timeLeft - 10;
+    timeLeft = timeLeft - 5;
     questionFour();
 }
 
 // Fourth Question
 var questionFour = function () {
-    questionEl.textContent = "Question #4: String values must be enclose within ____ when being assigned to variables."
-    answerChoiceOne.textContent = "commas";
-    answerChoiceTwo.textContent = "curly brackets";
-    answerChoiceThree.textContent = "quotes";
-    answerChoiceFour.textContent = "parenthesis";
+    questionEl.textContent = "Question #4: How can you add a comment in a JavaScript"
+    answerChoiceOne.textContent = "append.note: This is a comment";
+    answerChoiceTwo.textContent = "<!--This is a comment-->";
+    answerChoiceThree.textContent = "//This is a comment";
+    answerChoiceFour.textContent = "'This is a comment'";
 
     answerChoiceOne.addEventListener("click", questionFive);
     answerChoiceTwo.addEventListener("click", questionFive);
@@ -129,21 +128,21 @@ var questionFour = function () {
 }
 
 var rightAnswerFour = function () {
-    timeLeft = timeLeft + 10
+    timeLeft = timeLeft + 5
     questionFive();
 }
 var wrongAnswerFour = function () {
-    timeLeft = timeLeft - 10;
+    timeLeft = timeLeft - 5;
     questionFive();
 }
 
 // Fifth Question
 var questionFive = function () {
-    questionEl.textContent = "Question #5: A very useful tool used during development and debugging for printing content to the debugger is:"
-    answerChoiceOne.textContent = "console.log";
-    answerChoiceTwo.textContent = "JavaScript";
-    answerChoiceThree.textContent = "terminal/bash";
-    answerChoiceFour.textContent = "for loops";
+    questionEl.textContent = "Question #5: Inside which HTML element do we put the JavaScript?"
+    answerChoiceOne.textContent = "<script>";
+    answerChoiceTwo.textContent = "<javascript>";
+    answerChoiceThree.textContent = "<js>";
+    answerChoiceFour.textContent = "<scripting>";
 
     answerChoiceOne.addEventListener("click", rightAnswerFive);
     answerChoiceTwo.addEventListener("click", gameOver);
@@ -152,19 +151,19 @@ var questionFive = function () {
 }
 
 var rightAnswerFive = function () {
-    timeLeft = timeLeft + 10
+    timeLeft = timeLeft + 5
     gameOver();
 }
 var wrongAnswerFive = function () {
-    timeLeft = timeLeft - 10;
+    timeLeft = timeLeft - 5;
     gameOver();
 }
 
-// Game Over
+
 var gameOver = function () {
     clearInterval(timeInterval);
     var closingHeaderEl = document.createElement("h1");
-    closingHeaderEl.textContent = "All done!";
+    closingHeaderEl.textContent = "Game Over";
     closingContainerEl.appendChild(closingHeaderEl);
 
     var closingCommentEl = document.createElement("p");

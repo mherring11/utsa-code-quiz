@@ -5,7 +5,7 @@ header {
 }
 
 .view-scores:hover {
-    background-color: black;
+    background-color: blue;
     color: white;
 }
 
@@ -29,7 +29,7 @@ main {
 }
 
 .btn:hover {
-    background-color: black;
+    background-color: blue;
     color: white;
 }
 
